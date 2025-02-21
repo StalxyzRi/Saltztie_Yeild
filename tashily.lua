@@ -17,6 +17,7 @@ if not game:IsLoaded() then
     notLoaded:Destroy()
 end
 
+
 currentVersion = "6"
 
 Holder = Instance.new("Frame")
@@ -207,7 +208,7 @@ Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.TextSize = 18
-Title.Text = "Saltzte Yield [SE] 1.0"
+Title.Text = "Saltzte Yield [SEA] 2.4"
 
 do
 	local emoji = ({
@@ -4295,8 +4296,9 @@ CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads old Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'explorer / dex', DESC = 'Opens DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'olddex / odex', DESC = 'Opens Old DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'remotespy / rspy', DESC = 'Opens Simple Spy V3'}
-CMDs[#CMDs + 1] = {NAME = 'Hydroxide / hxi', DESC = 'Opens Hydroxide'}
-CMDs[#CMDs + 1] = {NAME = 'Saltz Discord', DESC = 'Opens Saltz Discord'}
+CMDs[#CMDs + 1] = {NAME = 'Hydroxide / hxi', DESC = 'Opens Hydroxide'}'
+CMDs[#CMDs + 1] = {NAME = 'ResetOp / reop', DESC = 'Reset Button Back'}'
+CMDs[#CMDs + 1] = {NAME = 'Fluend', DESC = 'Opens Saltz Discord'}
 CMDs[#CMDs + 1] = {NAME = 'audiologger / alogger', DESC = 'Opens Edges audio logger'}
 CMDs[#CMDs + 1] = {NAME = 'serverinfo / info', DESC = 'Gives you info about the server'}
 CMDs[#CMDs + 1] = {NAME = 'jobid', DESC = 'Copies the games JobId to your clipboard'}
@@ -10248,6 +10250,23 @@ addcmd('hydroxide',{'hxi'},function(args, speaker)
     
     webImport("init")
     webImport("ui/main")
+end)
+
+addcmd('ResetOp',{'reop'},function(args, speaker)
+	notify("Loading",'Hold on a sec')
+	game.Loaded:Wait()
+
+	--incase its already disabled
+	starterthing:SetCore("ResetButtonCallback", true)
+
+	--the automation
+	local starterthing = game:GetService("StarterGui")
+	while true do
+		starterthing.Changed:Wait()
+		if starterthing:GetCore("ResetButtonCallback") == false then
+			starterthing:SetCore("ResetButtonCallback", true)
+		end
+	end
 end)
 
 
