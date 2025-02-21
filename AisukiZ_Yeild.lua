@@ -212,7 +212,7 @@ if Player.UserId == 1000727090 then
 	Title.Size = UDim2.new(0, 250, 0, 20)
 	Title.Font = Enum.Font.SourceSans
 	Title.TextSize = 18
-	Title.Text = "Saltzte Yield [SEA] 2.4"
+	Title.Text = "Saltzte Yield [Admin] 5.5"
 
 	do
 		local emoji = ({
