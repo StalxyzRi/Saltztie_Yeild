@@ -4296,9 +4296,9 @@ CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads old Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'explorer / dex', DESC = 'Opens DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'olddex / odex', DESC = 'Opens Old DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'remotespy / rspy', DESC = 'Opens Simple Spy V3'}
-CMDs[#CMDs + 1] = {NAME = 'Hydroxide / hxi', DESC = 'Opens Hydroxide'}'
-CMDs[#CMDs + 1] = {NAME = 'ResetOp / reop', DESC = 'Reset Button Back'}'
-CMDs[#CMDs + 1] = {NAME = 'Fluend', DESC = 'Opens Saltz Discord'}
+CMDs[#CMDs + 1] = {NAME = 'Hydroxide / hxi', DESC = 'Opens Hydroxide'}
+CMDs[#CMDs + 1] = {NAME = 'ResetOpen / reop', DESC = 'Opens Reset Button Open'}
+CMDs[#CMDs + 1] = {NAME = 'dcs' DESC = 'Opens Saltz Discord'}
 CMDs[#CMDs + 1] = {NAME = 'audiologger / alogger', DESC = 'Opens Edges audio logger'}
 CMDs[#CMDs + 1] = {NAME = 'serverinfo / info', DESC = 'Gives you info about the server'}
 CMDs[#CMDs + 1] = {NAME = 'jobid', DESC = 'Copies the games JobId to your clipboard'}
@@ -10238,7 +10238,7 @@ addcmd('remotespy',{'rspy'},function(args, speaker)
 	loadstring(game:HttpGet("https://androssy.net/files/iy/SimpleSpy.lua"))()
 end)
 
-addcmd('hydroxide',{'hxi'},function(args, speaker)
+addcmd('hydroxide',{'hydroxide'},function(args, speaker)
 	notify("Loading",'Hold on a sec')
 
     local owner = "Upbolt"
@@ -10270,8 +10270,8 @@ addcmd('ResetOp',{'reop'},function(args, speaker)
 end)
 
 
-addcmd('saltz discord' ,function(args, speaker)
-	notify("Loading",'Hold on a sec')
+addcmd('dcs' ,function(args, speaker)
+	notify("Join Discord.",'Hold on a sec')
 	local HttpService = game:GetService("HttpService")
 	local DISCORD_INVITE = 'jbuTh7yxck'
 
@@ -10292,7 +10292,6 @@ addcmd('saltz discord' ,function(args, speaker)
 			})
 		})
 	end
-	notify("Join Discord",'Hold on a sec')
 end)
 
 
